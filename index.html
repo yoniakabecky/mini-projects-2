@@ -32,10 +32,14 @@
 
         <div id="theme-sw-wrapper">
           <span>Dark Mode</span>
-          <span id="theme-switch">
-            <input type="checkbox" />
+          <label id="theme-switch">
+            <input
+              type="checkbox"
+              id="theme-checkbox"
+              onchange="toggleTheme()"
+            />
             <span id="switch-button"></span>
-          </span>
+          </label>
         </div>
       </header>
 
@@ -205,5 +209,7 @@
         </section>
       </main>
     </div>
+
+    <script src="./js/toggleTheme.js"></script>
   </body>
 </html>
