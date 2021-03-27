@@ -20,7 +20,7 @@
     <title>Social Media Dashboard | Frontend Mentor</title>
   </head>
 
-  <body>
+  <body class="dark-theme">
     <div id="bg-top"></div>
 
     <div class="container">
@@ -32,7 +32,10 @@
 
         <div id="theme-sw-wrapper">
           <span>Dark Mode</span>
-          <span class="theme-switch"></span>
+          <span id="theme-switch">
+            <input type="checkbox" />
+            <span id="switch-button"></span>
+          </span>
         </div>
       </header>
 
@@ -42,12 +45,12 @@
 
           <div class="card-lg-wrapper">
             <div class="card-lg">
-              <span class="top-bar facebook"></span>
+              <div class="top-bar facebook"></div>
 
               <h3 class="non-display">facebook</h3>
 
               <div class="account-info">
-                <span class="icons">facebook</span>
+                <span class="icons facebook-icon"></span>
                 <p class="account-name">@nathanf</p>
               </div>
 
@@ -56,16 +59,18 @@
                 <p class="unit">Followers</p>
               </div>
 
-              <div class="increase">12 Today</div>
+              <div class="comparison increase">
+                <span class="arrow"></span>12 Today
+              </div>
             </div>
 
             <div class="card-lg">
-              <span class="top-bar twitter"></span>
+              <div class="top-bar twitter"></div>
 
               <h3 class="non-display">twitter</h3>
 
               <div class="account-info">
-                <span class="icons">twitter</span>
+                <span class="icons twitter-icon"></span>
                 <p class="account-name">@nathanf</p>
               </div>
 
@@ -74,16 +79,18 @@
                 <p class="unit">Followers</p>
               </div>
 
-              <div class="increase">99 Today</div>
+              <div class="comparison increase">
+                <span class="arrow"></span>99 Today
+              </div>
             </div>
 
             <div class="card-lg">
-              <span class="top-bar instagram"></span>
+              <div class="top-bar instagram"></div>
 
               <h3 class="non-display">instagram</h3>
 
               <div class="account-info">
-                <span class="icons">instagram</span>
+                <span class="icons instagram-icon"></span>
                 <p class="account-name">@realnathanf</p>
               </div>
 
@@ -92,16 +99,18 @@
                 <p class="unit">Followers</p>
               </div>
 
-              <div class="increase">1099 Today</div>
+              <div class="comparison increase">
+                <span class="arrow"></span>1099 Today
+              </div>
             </div>
 
             <div class="card-lg">
-              <span class="top-bar youTube"></span>
+              <div class="top-bar youTube"></div>
 
-              <h3 class="non-display">youTube</h3>
+              <h3 class="non-display">you tube</h3>
 
               <div class="account-info">
-                <span class="icons">youTube</span>
+                <span class="icons youTube-icon"></span>
                 <p class="account-name">Nathan F.</p>
               </div>
 
@@ -110,7 +119,9 @@
                 <p class="unit">Subscribers</p>
               </div>
 
-              <div class="decrease">144 Today</div>
+              <div class="comparison decrease">
+                <span class="arrow"></span>144 Today
+              </div>
             </div>
           </div>
         </section>
@@ -120,59 +131,75 @@
 
           <div class="card-sm-wrapper">
             <div class="card-sm">
-              <h3 class="headline">Page Views</h3>
+              <h3>Page Views</h3>
               <div class="number">87</div>
-              <div class="icons">facebook</div>
-              <div class="increase">3%</div>
+              <div class="icons facebook-icon"></div>
+              <div class="comparison increase">
+                <span class="arrow"></span>3%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Likes</h3>
+              <h3>Likes</h3>
               <div class="number">52</div>
-              <div class="icons">facebook</div>
-              <div class="decrease">2%</div>
+              <div class="icons facebook-icon"></div>
+              <div class="comparison decrease">
+                <span class="arrow"></span>2%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Likes</h3>
+              <h3>Likes</h3>
               <div class="number">5462</div>
-              <div class="icons">instagram</div>
-              <div class="increase">2257%</div>
+              <div class="icons instagram-icon"></div>
+              <div class="comparison increase">
+                <span class="arrow"></span>2257%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Profile Views</h3>
+              <h3>Profile Views</h3>
               <div class="number">52k</div>
-              <div class="icons">instagram</div>
-              <div class="increase">1375%</div>
+              <div class="icons instagram-icon"></div>
+              <div class="comparison increase">
+                <span class="arrow"></span>1375%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Retweets</h3>
+              <h3>Retweets</h3>
               <div class="number">117</div>
-              <div class="icons">twitter</div>
-              <div class="increase">303%</div>
+              <div class="icons twitter-icon"></div>
+              <div class="comparison increase">
+                <span class="arrow"></span>303%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Likes</h3>
+              <h3>Likes</h3>
               <div class="number">507</div>
-              <div class="icons">twitter</div>
-              <div class="increase">553%</div>
+              <div class="icons twitter-icon"></div>
+              <div class="comparison increase">
+                <span class="arrow"></span>553%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Likes</h3>
+              <h3>Likes</h3>
               <div class="number">107</div>
-              <div class="icons">youTube</div>
-              <div class="decrease">19%</div>
+              <div class="icons youTube-icon"></div>
+              <div class="comparison decrease">
+                <span class="arrow"></span>19%
+              </div>
             </div>
 
             <div class="card-sm">
-              <h3 class="headline">Total Views</h3>
+              <h3>Total Views</h3>
               <div class="number">1407</div>
-              <div class="icons">youTube</div>
-              <div class="decrease">12%</div>
+              <div class="icons youTube-icon"></div>
+              <div class="comparison decrease">
+                <span class="arrow"></span>12%
+              </div>
             </div>
           </div>
         </section>
