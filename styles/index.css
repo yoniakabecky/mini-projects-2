@@ -4,9 +4,37 @@
   box-sizing: border-box;
 }
 
-body {
+:root {
+  --increase: hsl(163, 72%, 41%);
+  --decrease: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --youTube: hsl(348, 97%, 39%);
+}
+
+html {
   font-family: "Inter", sans-serif;
   font-size: 14px;
+}
+
+body {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+#bg-top {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 295px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: var(--top-bg);
+  z-index: 0;
 }
 
 .dark-theme {
@@ -27,26 +55,102 @@ body {
   --switch-bg: hsl(230, 22%, 74%);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.non-display {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36px;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+header .total {
+  color: var(--text-secondary);
+}
+
+#theme-sw-wrapper {
+  align-self: center;
+}
+
+main {
+  overflow: auto;
+}
+
+.card-lg-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  column-gap: 30px;
+  row-gap: 25px;
+  margin: 2.875rem auto;
+}
+
+.card-lg {
+  margin: 2.875 auto;
+  height: 215px;
+  background-color: var(--card-bg);
+  border-radius: 5px;
+}
+
+.card-sm-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  column-gap: 30px;
+  row-gap: 25px;
+  margin: 1.5rem auto;
+}
+
+.card-sm {
+  height: 125px;
+  background-color: var(--card-bg);
+  border-radius: 5px;
+}
+
 .increase {
-  color: hsl(163, 72%, 41%);
+  color: var(--increase);
 }
 
 .decrease {
-  color: hsl(356, 69%, 56%);
+  color: var(--decrease);
 }
 
-.facebook {
-  background-color: hsl(208, 92%, 53%);
+@media screen and (max-width: 1120px) {
+  .container {
+    padding: 0 1.725rem;
+  }
 }
 
-.twitter {
-  background-color: hsl(203, 89%, 53%);
-}
+@media screen and (max-width: 640px) {
+  header {
+    flex-direction: column;
+  }
 
-.instagram {
-  background-color: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
-}
+  #title-wrapper {
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--text-secondary);
+  }
 
-.youTube {
-  background-color: hsl(348, 97%, 39%);
+  #theme-sw-wrapper {
+    padding: 1rem 0;
+  }
+
+  .card-lg-wrapper {
+    margin-top: 1.725rem;
+  }
 }
