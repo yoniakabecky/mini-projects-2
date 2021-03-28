@@ -37,7 +37,7 @@ body {
   top: 0px;
   left: 0px;
   width: 100vw;
-  height: 295px;
+  height: 235px;
   border-radius: 0px 0px 10px 10px;
   background-color: var(--top-bg);
   z-index: 0;
@@ -102,6 +102,10 @@ header .total {
   align-items: center;
   align-self: center;
   color: var(--text-secondary);
+}
+
+#theme-sw-wrapper > span {
+  display: block;
 }
 
 #theme-switch {
@@ -344,6 +348,8 @@ main {
   }
 
   #theme-sw-wrapper {
+    align-self: unset;
+    justify-content: space-between;
     padding: 1rem 0;
   }
 
