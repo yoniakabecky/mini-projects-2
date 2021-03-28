@@ -4,6 +4,7 @@ const checkbox = document.getElementById("theme-checkbox");
 if (!preferenceScheme.matches) {
   document.body.classList.remove("dark-theme");
   document.body.classList.add("light-theme");
+  checkbox.checked = true;
 }
 
 const toggleTheme = () => {
