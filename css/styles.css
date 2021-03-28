@@ -89,7 +89,7 @@ header {
 }
 
 header h1 {
-  font-size: 1.75rem;
+  font-size: 28px;
   margin-bottom: 0.25rem;
 }
 
@@ -151,6 +151,10 @@ header .total {
 
 main {
   overflow: auto;
+}
+
+.dayly-overview h2 {
+  font-size: 24px;
 }
 
 .card-lg-wrapper {
